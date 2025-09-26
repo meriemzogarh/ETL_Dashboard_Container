@@ -27,15 +27,15 @@ Frontend: [meriemzogarh/etl_dashboard-frontend:latest](https://hub.docker.com/r/
 
 3. **If you want to pull them manually:**
 
-```bash
-docker pull meriemzogarh/etl_dashboard-backend:latest
-docker pull meriemzogarh/etl_dashboard-frontend:latest
+   ```bash
+   docker pull meriemzogarh/etl_dashboard-backend:latest
+   docker pull meriemzogarh/etl_dashboard-frontend:latest
 
 4. **Start the containers:**
 
-```bash
-docker-compose pull    # pulls the latest images from Docker Hub
-docker-compose up -d   # runs containers in the background
+   ```bash
+   docker-compose pull    # pulls the latest images from Docker Hub
+   docker-compose up -d   # runs containers in the background
 
 
 5. **Access the apps:**
@@ -61,12 +61,12 @@ Backend (FastAPI) → http://localhost:8000
 
 Images are tagged with latest for convenience.
 For stability in production, you can also use versioned tags (e.g., v1.0.0) if available:
-```bash
-   services:
-     backend:
-       image: meriemzogarh/etl_dashboard-backend:v1.0.0
-     frontend:
-       image: meriemzogarh/etl_dashboard-frontend:v1.0.0
+   ```bash
+      services:
+        backend:
+          image: meriemzogarh/etl_dashboard-backend:v1.0.0
+        frontend:
+          image: meriemzogarh/etl_dashboard-frontend:v1.0.0
 
 ## 👩‍💻 Contributing
 
