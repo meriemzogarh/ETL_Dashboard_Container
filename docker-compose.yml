@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  backend:
+    image: meriemzogarh/etl_dashboard-backend:latest   # ✅ use Docker Hub image
+    ports:
+      - "8000:8000"
+    environment:
+      - FASTAPI_HOST=0.0.0.0
+      - FASTAPI_PORT=8000
+      - FASTAPI_RELOAD=true
+      - LOG_LEVEL=DEBUG
+      - UPLOAD_FOLDER=/app/data/uploads
+      - PROCESSED_FOLDER=/app/data/processed
+    volumes:
+      - etl_data:/app/data    # ✅ named volume instead of local bind mount
+    networks:
+      - etl-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    image: meriemzogarh/etl_dashboard-frontend:latest  # ✅ use Docker Hub image
+    ports:
+      - "3000:3000"
+    environment:
+      - FLASK_HOST=0.0.0.0
+      - FLASK_PORT=3000
+      - FLASK_DEBUG=true
+      - FASTAPI_HOST=backend
+      - FASTAPI_PORT=8000
+    depends_on:
+      - backend
+    networks:
+      - etl-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  etl-network:
+    driver: bridge
+
+volumes:
+  etl_data:
