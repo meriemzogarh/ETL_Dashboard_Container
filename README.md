@@ -61,12 +61,14 @@ Backend (FastAPI) → http://localhost:8000
 
 Images are tagged with latest for convenience.
 For stability in production, you can also use versioned tags (e.g., v1.0.0) if available:
-   ```bash
-      services:
-        backend:
-          image: meriemzogarh/etl_dashboard-backend:v1.0.0
-        frontend:
-          image: meriemzogarh/etl_dashboard-frontend:v1.0.0
+```bash
+    services:
+     backend:
+      image: meriemzogarh/etl_dashboard-backend:v1.0.0
+     frontend:
+      image: meriemzogarh/etl_dashboard-frontend:v1.0.0
+
+---
 
 ## 👩‍💻 Contributing
 
