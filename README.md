@@ -29,7 +29,7 @@ Frontend → http://localhost:3000
 
 Backend (FastAPI) → http://localhost:8000
 
-============================================================
+
 ## 🐳 Docker Hub Images
 
 Both services are published to Docker Hub under the namespace **meriemzogarh**:
@@ -43,7 +43,7 @@ Frontend: [meriemzogarh/etl_dashboard-frontend:latest](https://hub.docker.com/r/
 docker pull meriemzogarh/etl_dashboard-backend:latest
 docker pull meriemzogarh/etl_dashboard-frontend:latest
 
-================================================================
+
 
 ## ⚙️ Configuration
 
@@ -56,20 +56,23 @@ docker pull meriemzogarh/etl_dashboard-frontend:latest
 - Default environment variables are defined in the docker-compose.yml.
   Update them if you need custom ports or paths.
 
-====================================================================
+
 
 ## 🔖 Versioning
 
 Images are tagged with latest for convenience.
 For stability in production, you can also use versioned tags (e.g., v1.0.0) if available:
-
+/n
 services:
   backend:
     image: meriemzogarh/etl_dashboard-backend:v1.0.0
   frontend:
     image: meriemzogarh/etl_dashboard-frontend:v1.0.0
 
-=======================================================================
+## 📜 License
+
+This repository and its contents are private and proprietary.
+Unauthorized copying, modification, distribution, or use is strictly prohibited.
 
 ## 👩‍💻 Contributing
 
