@@ -17,20 +17,7 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
    git clone https://github.com/<your-org-or-username>/etl-dashboard-docker.git
    cd etl-dashboard-docker
 
-3. **Start the containers:**
-
-  docker-compose pull    # pulls the latest images from Docker Hub
-  docker-compose up -d   # runs containers in the background
-
-
-4. **Access the apps:**
-
-Frontend → http://localhost:3000
-
-Backend (FastAPI) → http://localhost:8000
-
-
-## 🐳 Docker Hub Images
+### 🐳 Docker Hub Images
 
 Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
@@ -38,11 +25,22 @@ Backend: [meriemzogarh/etl_dashboard-backend:latest](https://hub.docker.com/r/me
 
 Frontend: [meriemzogarh/etl_dashboard-frontend:latest](https://hub.docker.com/r/meriemzogarh/etl_dashboard-frontend)
 
-**If you want to pull them manually:**
+3. **If you want to pull them manually:**
 
 docker pull meriemzogarh/etl_dashboard-backend:latest
 docker pull meriemzogarh/etl_dashboard-frontend:latest
 
+4. **Start the containers:**
+
+  docker-compose pull    # pulls the latest images from Docker Hub
+  docker-compose up -d   # runs containers in the background
+
+
+5. **Access the apps:**
+
+Frontend → http://localhost:3000
+
+Backend (FastAPI) → http://localhost:8000
 
 
 ## ⚙️ Configuration
