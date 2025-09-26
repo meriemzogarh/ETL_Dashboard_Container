@@ -67,8 +67,8 @@ For stability in production, you can also use versioned tags (e.g., v1.0.0) if a
       image: meriemzogarh/etl_dashboard-backend:v1.0.0
      frontend:
       image: meriemzogarh/etl_dashboard-frontend:v1.0.0
+```
 
----
 
 ## 👩‍💻 Contributing
 
