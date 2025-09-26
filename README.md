@@ -40,7 +40,7 @@ Frontend: [meriemzogarh/etl_dashboard-frontend:latest](https://hub.docker.com/r/
 
 5. **Access the apps:**
 
-Frontend → http://localhost:3000
+Frontend (Flask) → http://localhost:3000
 
 Backend (FastAPI) → http://localhost:8000
 
