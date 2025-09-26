@@ -62,7 +62,7 @@ docker pull meriemzogarh/etl_dashboard-frontend:latest
 
 Images are tagged with latest for convenience.
 For stability in production, you can also use versioned tags (e.g., v1.0.0) if available:
-/n
+\n
 services:
   backend:
     image: meriemzogarh/etl_dashboard-backend:v1.0.0
