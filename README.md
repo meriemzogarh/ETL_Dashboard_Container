@@ -68,12 +68,12 @@ For stability in production, you can also use versioned tags (e.g., v1.0.0) if a
      frontend:
        image: meriemzogarh/etl_dashboard-frontend:v1.0.0
 
-## 📜 License
-
-This repository and its contents are private and proprietary.
-Unauthorized copying, modification, distribution, or use is strictly prohibited.
-
 ## 👩‍💻 Contributing
 
 This repo is for container orchestration only.
 If you need to modify backend/frontend code, please refer to the main project repository.
+
+## 📜 License
+
+This repository and its contents are private and proprietary.
+Unauthorized copying, modification, distribution, or use is strictly prohibited.
