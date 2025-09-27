@@ -1,6 +1,0 @@
-services:
-  frontend:
-    platform: linux/amd64
-
-  backend:
-    platform: linux/amd64
