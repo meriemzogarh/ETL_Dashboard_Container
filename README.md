@@ -14,7 +14,7 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 2. **Clone this repo** (only the `docker-compose.yml` lives here):
 
    ```bash
-   git clone https://github.com/<your-org-or-username>/etl-dashboard-docker.git
+   git clone https://github.com/meriemzogarh/ETL_Dashboard_Container.git
    cd etl-dashboard-docker
 
 ### 🐳 Docker Hub Images
