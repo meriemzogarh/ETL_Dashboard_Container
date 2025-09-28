@@ -22,14 +22,14 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
 Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
-* **Backend**: [meriemzogarh/etl_dashboard-backend:latest](https://hub.docker.com/r/meriemzogarh/etl_dashboard-backend)
-* **Frontend**: [meriemzogarh/etl_dashboard-frontend:latest](https://hub.docker.com/r/meriemzogarh/etl_dashboard-frontend)
+* **Backend**: [meriemzogarh/yazaki_etl_dashboard-backend:latest](https://hub.docker.com/r/meriemzogarh/yazaki_etl_dashboard-backend)
+* **Frontend**: [meriemzogarh/yazaki_etl_dashboard-frontend:latest](https://hub.docker.com/r/meriemzogarh/yazaki_etl_dashboard-frontend)
 
 3. **If you want to pull them manually:**
 
    ```bash
-   docker pull meriemzogarh/etl_dashboard-backend:latest
-   docker pull meriemzogarh/etl_dashboard-frontend:latest
+   docker pull meriemzogarh/yazaki_etl_dashboard-backend:latest
+   docker pull meriemzogarh/yazaki_etl_dashboard-frontend:latest
    ```
 
 4. **Start the containers:**
