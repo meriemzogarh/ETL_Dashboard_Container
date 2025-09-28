@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend:
-    image: meriemzogarh/etl_dashboard-backend:latest   # ✅ use Docker Hub image
+    image: meriemzogarh/yazaki_etl_dashboard_backend:latest   # ✅ use Docker Hub image
     platform: linux/amd64                               # ⚡ force amd64 for Windows
     ports:
       - "8000:8000"
@@ -26,7 +26,7 @@ services:
       start_period: 40s
 
   frontend:
-    image: meriemzogarh/etl_dashboard-frontend:latest  # ✅ use Docker Hub image
+    image: meriemzogarh/yazaki_etl_dashboard_frontend:latest  # ✅ use Docker Hub image
     platform: linux/amd64                               # ⚡ force amd64 for Windows
     ports:
       - "3000:3000"
