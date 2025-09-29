@@ -13,7 +13,7 @@ services:
       - UPLOAD_FOLDER=/app/data/uploads
       - PROCESSED_FOLDER=/app/data/processed
     volumes:
-      - ./data:/app/data    # ✅ bind mount to host folder instead of named volume
+      - etl_data:/app/data    # ✅ named volume instead of local bind mount
     networks:
       - etl-network
     restart: unless-stopped
