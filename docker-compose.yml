@@ -50,5 +50,5 @@ networks:
   etl-network:
     driver: bridge
 
-volume:
+volumes:
   etl_data:
