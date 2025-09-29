@@ -1,27 +1,17 @@
 services:
   backend:
-    image: storbiic/etl_dashboard-backend:latest 
+    image: storbiic/etl_dashboard-backend:latest
     ports:
       - "8000:8000"
     environment:
       - FASTAPI_HOST=0.0.0.0
       - FASTAPI_PORT=8000
-      - FASTAPI_RELOAD=true
-      - LOG_LEVEL=DEBUG
+      - LOG_LEVEL=INFO
       - UPLOAD_FOLDER=/app/data/uploads
       - PROCESSED_FOLDER=/app/data/processed
       - PIPELINE_OUTPUT_FOLDER=/app/data/pipeline_output
     volumes:
-      # Use consistent volume mounting across platforms
-      - type: bind
-        source: ./data
-        target: /app/data
-      - type: bind
-        source: ./backend
-        target: /app/backend
-      - type: bind
-        source: ./powerbi
-        target: /app/powerbi
+      - ./data:/app/data
     networks:
       - etl-network
     restart: unless-stopped
@@ -33,38 +23,26 @@ services:
       start_period: 40s
 
   frontend:
-    image: storbiic/etl_dashboard-frontend:latest 
+    image: storbiic/etl_dashboard-frontend:latest
     ports:
       - "3000:3000"
     environment:
       - FLASK_HOST=0.0.0.0
       - FLASK_PORT=3000
-      - FLASK_DEBUG=true
+      - FLASK_DEBUG=false
       - FASTAPI_HOST=backend
       - FASTAPI_PORT=8000
       - PROCESSED_FOLDER=/app/data/processed
       - PIPELINE_OUTPUT_FOLDER=/app/data/pipeline_output
     volumes:
-      # Use consistent volume mounting across platforms
-      - type: bind
-        source: ./data
-        target: /app/data
-      - type: bind
-        source: ./frontend
-        target: /app/frontend
-      - type: bind
-        source: ./backend
-        target: /app/backend
-      - type: bind
-        source: ./powerbi
-        target: /app/powerbi
+      - ./data:/app/data
     depends_on:
       - backend
     networks:
       - etl-network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:5000/ || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -73,7 +51,3 @@ services:
 networks:
   etl-network:
     driver: bridge
-
-volumes:
-  etl_data:
-
