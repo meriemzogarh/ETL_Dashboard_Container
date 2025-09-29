@@ -1,6 +1,6 @@
 services:
   backend:
-    image: storbiic/etl_dashboard-frontend:latest 
+    image: storbiic/etl_dashboard-backend:latest 
     ports:
       - "8000:8000"
     environment:
