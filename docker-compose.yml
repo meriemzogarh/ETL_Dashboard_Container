@@ -49,6 +49,3 @@ services:
 networks:
   etl-network:
     driver: bridge
-
-volumes:
-  etl_data:
