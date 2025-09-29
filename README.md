@@ -79,8 +79,5 @@ If you need to modify backend/frontend code, please refer to the main project re
 ---
 
 ## 📜 License
-
 This repository and its contents are private and proprietary.
 Unauthorized copying, modification, distribution, or use is strictly prohibited.
-
-```
