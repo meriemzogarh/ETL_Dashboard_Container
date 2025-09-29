@@ -24,16 +24,16 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
 Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
-* **Backend**: [meriemzogarh/yazaki_etl_dashboard_backend:latest](https://hub.docker.com/r/meriemzogarh/yazaki_etl_dashboard_backend)
-* **Frontend**: [meriemzogarh/yazaki_etl_dashboard_frontend:latest](https://hub.docker.com/r/meriemzogarh/yazaki_etl_dashboard_frontend)
+* **Backend**: https://hub.docker.com/r/storbiic/333a4eef89da
+* **Frontend**: https://hub.docker.com/r/storbiic/66a8b6c961b5
 
 3. **If you want to pull them manually:**
 
    ```bash
-   docker pull meriemzogarh/yazaki_etl_dashboard_backend:latest
+   docker pull storbiic/333a4eef89da:latest
    ```
    ```bash
-   docker pull meriemzogarh/yazaki_etl_dashboard_frontend:latest
+   docker pull storbiic/66a8b6c961b5:latest
    ```
 
 4. **Start the containers:**
