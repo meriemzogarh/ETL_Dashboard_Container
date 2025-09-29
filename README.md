@@ -9,7 +9,7 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
 1. **Install prerequisites**:
    - [Docker](https://docs.docker.com/get-docker/)
-   - [Docker Compose](https://docs.docker.com/compose/install/)
+    - [Git](https://git-scm.com/downloads)
 
 2. **Clone this repo**:
 
