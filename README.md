@@ -15,7 +15,7 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
    ```bash
    git clone https://github.com/meriemzogarh/ETL_Dashboard_Container.git
-   cd etl-dashboard-docker
+   cd etl_dashboard_container
    ````
 
 ## 🐳 Docker Hub Images
