@@ -15,6 +15,8 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
    ```bash
    git clone https://github.com/meriemzogarh/ETL_Dashboard_Container.git
+   ````
+   ```bash
    cd etl_dashboard_container
    ````
 
@@ -29,6 +31,8 @@ Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
    ```bash
    docker pull meriemzogarh/yazaki_etl_dashboard_backend:latest
+   ```
+   ```bash
    docker pull meriemzogarh/yazaki_etl_dashboard_frontend:latest
    ```
 
@@ -36,6 +40,8 @@ Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
    ```bash
    docker-compose pull
+   ```
+   ```bash
    docker-compose up -d
    ```
 
