@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend:
-    image: meriemzogarh/yazaki_etl_dashboard_backend:latest   # ✅ use Docker Hub image
+    image: storbiic/etl_dashboard-backend:latest   # ✅ use Docker Hub image
     ports:
       - "8000:8000"
     environment:
@@ -13,7 +13,7 @@ services:
       - UPLOAD_FOLDER=/app/data/uploads
       - PROCESSED_FOLDER=/app/data/processed
     volumes:
-      - ./data:/app/data    # ✅ bind mount to host folder instead of named volume
+      - etl_data:/app/data    # ✅ named volume instead of local bind mount
     networks:
       - etl-network
     restart: unless-stopped
@@ -25,7 +25,7 @@ services:
       start_period: 40s
 
   frontend:
-    image: meriemzogarh/etl_dashboard-frontend:latest  # ✅ use Docker Hub image
+    image: storbiic/etl_dashboard-frontend:latest  # ✅ use Docker Hub image
     ports:
       - "3000:3000"
     environment:
