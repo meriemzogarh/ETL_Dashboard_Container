@@ -24,16 +24,16 @@ The application is prebuilt and published to **Docker Hub**, so you don’t need
 
 Both services are published to Docker Hub under the namespace **meriemzogarh**:
 
-* **Backend**: https://hub.docker.com/r/storbiic/333a4eef89da
-* **Frontend**: https://hub.docker.com/r/storbiic/66a8b6c961b5
+* **Backend**: https://hub.docker.com/r/storbiic/etl_dashboard-frontend
+* **Frontend**: https://hub.docker.com/r/storbiic/etl_dashboard-backend
 
 3. **If you want to pull them manually:**
 
    ```bash
-   docker pull storbiic/333a4eef89da:latest
+   docker pull storbiic/etl_dashboard-frontend:latest
    ```
    ```bash
-   docker pull storbiic/66a8b6c961b5:latest
+   docker pull storbiic/etl_dashboard-backend:latest
    ```
 
 4. **Start the containers:**
