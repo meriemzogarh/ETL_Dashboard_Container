@@ -22,6 +22,10 @@ jobs:
         run: |
           docker compose config
 
+      - name: Pull Docker images (from Docker Hub)
+        run: |
+          docker compose pull
+
       - name: Publish Build Info With JFrog CLI
         env:
           JFROG_CLI_BUILD_NAME: jfrog-docker-build-example
